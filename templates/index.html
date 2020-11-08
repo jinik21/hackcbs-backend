@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+  <h1 style="text-align: center;color:#2da69a;">Video to Text</h1>
+<form class="myform" enctype=multipart/form-data action="/predict" method="POST">
+  <h3>Upload audio</h3> <h6>(* .mp4 format only)</h6>
+  <input name="FS_audio" id="FS_audio" type="file" accept="video/mp4">   
+  <br/>
+  <button class="btn" style="margin-top: 16px;" type="submit">Submit</button>
+</form>
+    <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
