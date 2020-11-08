@@ -17,9 +17,9 @@ r = sr.Recognizer()
 def audio_transcription(path):
     sound = AudioSegment.from_wav(path)  
     chunks = split_on_silence(sound,
-        min_silence_len = 500,
+        min_silence_len = 450,
         silence_thresh = sound.dBFS-14,
-        keep_silence=500,
+        keep_silence=450,
     )
     folder_name = "audio_chunks"
     if not os.path.isdir(folder_name):
